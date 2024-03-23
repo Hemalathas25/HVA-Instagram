@@ -20,8 +20,10 @@ const UserSchema = new Schema({
     photo: { type: String }, // You can store the URL of the photo
 
     bio: { type: String },
-    
+
     website: { type: String }
+}, {
+    timestamps: true,
 })
 
 const User = mongoose.model('User', UserSchema);
