@@ -26,3 +26,5 @@ router.post('./logout',logoutUser);
 router.put('./update', updateUserProfile);
 router.get('/:id',protect, checkUser, getUserById);
 router.get('', search );
+
+export default router;

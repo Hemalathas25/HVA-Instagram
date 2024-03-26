@@ -98,13 +98,12 @@ const addAccount = async(req, res) => {
     try {
         const { username, password } = req.body;
 
-        // Check if a user with the same username already exists
         const existingUser = await User.findOne({ username });
         if (existingUser) {
             return res.status(400).json({ error: 'Username already exists' });
         }
 
-        // Create a new user account
+        
         const newUser = new User({ username, password });
         await newUser.save();
 
@@ -176,7 +175,6 @@ const addAccount = async(req, res) => {
  * @access Public 
  */
 
-
 const getUserById = async(req, res) => {
     try {
         const user = await getUser(req.params.id)
@@ -241,7 +239,7 @@ const deleteUser = async (req, res) => {
 };
 
 
-export {
+export{
      registerUser ,
      authUser ,
      getUserById,
