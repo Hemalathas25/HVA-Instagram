@@ -17,6 +17,8 @@ const signUpValidation = (req, res, next) => {
         });
     }
     next();
+
 };
 
 export default signUpValidation;
+ 

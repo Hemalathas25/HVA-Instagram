@@ -153,7 +153,7 @@ const addAccount = async(req, res) => {
             res.cookie('jwt', '', {
                 httpOnly: true,
                 expires: new Date(0)
-            }, (err) => {
+            }, (err) => {  
                 if (err) {
                     reject(err);
                 } else {
